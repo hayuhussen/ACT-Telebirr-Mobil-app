@@ -12,6 +12,27 @@
     spinner();
     
     
+
+
+
+//form 
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const emailInput = document.querySelector('#email');
+const paymentInput = document.querySelector('#payment');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  
+  if (nameInput.value === '' || emailInput.value === '' || paymentInput.value === '') {
+    alert('Please fill out all required fields.');
+    return;
+  }
+  
+  alert('Payment submitted successfully!');
+});
+
+
     // Initiate the wowjs
     new WOW().init();
     
